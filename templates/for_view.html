@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+{%block content%}
+
+<form method="post">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="number" class="form-label">ใส่ตัวเลขที่ต้องการดูสูตรคูณ</label>
+      <input type="number" class="form-control" id="number" name="number" placeholder="ใส่ตัวเลขที่นี่" min="1" required>
+    </div>
+    <button type="submit" class="btn btn-warning">Submit</button>
+  </form>
+
+<h3 class="mt-4">ตารางสูตรคูณ</h3>
+
+{% if error %}
+<div class="alert alert-danger mt-3" role="alert">
+    {{ error }}
+</div>
+{% endif %}
+
+{% if multiplication_data %}
+<table class="table caption-top">
+    <caption>ตารางสูตรคูณของ {{ number }}</caption>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">สูตรคูณ</th>
+        <th scope="col">ผลลัพธ์</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in multiplication_data %}
+      <tr>
+        <th scope="row">{{ forloop.counter }}</th>
+        <td>{{ number }} × {{ item.multiplier }}</td>
+        <td>{{ item.result }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endif %}
+
+<style>
+body {
+    background-color: #111827;
+    color: #e5e7eb;
+}
+
+.form-label {
+    color: #e5e7eb !important;
+    font-weight: bold;
+}
+
+.form-control {
+    background-color: #374151 !important;
+    border-color: #4b5563 !important;
+    color: #e5e7eb !important;
+}
+
+.form-control:focus {
+    background-color: #374151 !important;
+    border-color: #38bdf8 !important;
+    color: #e5e7eb !important;
+    box-shadow: 0 0 0 0.2rem rgba(56, 189, 248, 0.25) !important;
+}
+
+.btn-warning {
+    background-color: #f59e0b !important;
+    border-color: #f59e0b !important;
+    color: #111827 !important;
+}
+
+.btn-warning:hover {
+    background-color: #d97706 !important;
+    border-color: #d97706 !important;
+    color: #111827 !important;
+}
+
+.table {
+    color: #e5e7eb !important;
+    background-color: #1f2937 !important;
+}
+
+.table caption {
+    color: #e5e7eb !important;
+    font-weight: bold;
+}
+
+.table thead th {
+    background-color: #374151 !important;
+    border-color: #4b5563 !important;
+    color: #e5e7eb !important;
+}
+
+.table tbody tr {
+    border-color: #4b5563 !important;
+}
+
+.table tbody th,
+.table tbody td {
+    border-color: #4b5563 !important;
+    color: #e5e7eb !important;
+}
+
+h3 {
+    color: #e5e7eb !important;
+    font-weight: bold;
+}
+
+.alert-danger {
+    background-color: #dc2626 !important;
+    border-color: #dc2626 !important;
+    color: #fef2f2 !important;
+}
+</style>
+
+{%endblock content%}

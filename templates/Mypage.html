@@ -1,0 +1,477 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body class="bg-cyberpunk">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6">
+                <div class="solo-status-outer">
+                  <div class="solo-status-card-v2 profile-card-intro">
+                    <div class="status-header-v2">
+                      <span class="status-title-v2">PROFILE</span>
+                    </div>
+                    <div class="status-content-v2">
+                      <div class="d-flex align-items-center gap-4 mb-3 flex-wrap flex-md-nowrap justify-content-center">
+                        <img src="{% static 'img/220d7897641547.5eca0fff65396.gif' %}" class="profile-avatar-intro" alt="Profile">
+                        <div class="flex-grow-1">
+                          <div class="d-flex align-items-end gap-2 mb-1">
+                            <span class="profile-level-label">LEVEL</span>
+                            <span class="profile-level-num">100</span>
+                          </div>
+                          <div class="profile-name profile-name-white">SITHICHAI LOBYUT</div>
+                          <div class="profile-id-box mt-2">
+                            <span class="profile-id-label"><i class="bi bi-person-badge"></i> ID : </span>
+                            <span class="profile-id-num">6712732128</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="status-stats-v2 row g-2 mt-2">
+                        <div class="col-6">
+                          <div class="stat-row-v2"><span><i class="bi bi-arrow-up-circle"></i> STR</span><span>239 <span class="stat-plus">(+55)</span></span></div>
+                          <div class="stat-row-v2"><span><i class="bi bi-lightning"></i> AGI</span><span>235 <span class="stat-plus">(+70)</span></span></div>
+                          <div class="stat-row-v2"><span><i class="bi bi-eye"></i> PER</span><span>207 <span class="stat-plus">(+55)</span></span></div>
+                        </div>
+                        <div class="col-6">
+                          <div class="stat-row-v2"><span><i class="bi bi-heart"></i> VIT</span><span>211 <span class="stat-plus">(+55)</span></span></div>
+                          <div class="stat-row-v2"><span><i class="bi bi-magic"></i> INT</span><span>240 <span class="stat-plus">(+55)</span></span></div>
+                          <div class="stat-row-v2"><span><i class="bi bi-123"></i> Points</span><span>3</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body.bg-cyberpunk {
+            background: url('{% static "img/fb230a60040543.5a3b600e0b2f9.gif" %}') no-repeat center center fixed;
+            background-size: cover;   /* หรือเปลี่ยนเป็น contain ตามต้องการ */
+            min-height: 100vh;
+        }
+        .gradient-card {
+            background: linear-gradient(135deg, #2b003a 0%, #ff2fd6 50%, #00eaff 100%) !important;
+            color: #fff;
+            font-family: 'Press Start 2P', monospace;
+            border: 3px solid #00eaff;
+            box-shadow: 0 0 24px 4px #ff2fd6, 0 0 48px 8px #00eaff inset, 0 0 32px 8px #00eaff;
+            border-radius: 1.5rem;
+            position: relative;
+        }
+        .pixel-border {
+            box-shadow: 0 0 0 4px #ff2fd6, 0 0 0 8px #00eaff, 0 0 16px 4px #ff2fd6, 0 0 32px 8px #00eaff;
+            border-radius: 0.5rem;
+        }
+        .border-cyberpunk {
+            border-color: #ff2fd6 !important;
+            box-shadow: 0 0 16px 2px #00eaff, 0 0 32px 4px #ff2fd6;
+        }
+        .text-cyberpunk-neon {
+            color: #00eaff !important;
+            text-shadow: 0 0 8px #00eaff, 0 0 16px #ff2fd6, 0 2px 8px #0008, 0 0 24px #00eaff;
+        }
+        .text-cyberpunk-pink {
+            color: #ff2fd6 !important;
+            text-shadow: 0 0 8px #ff2fd6, 0 0 16px #00eaff, 0 2px 8px #0008;
+        }
+        .text-cyberpunk-blue {
+            color: #00eaff !important;
+            text-shadow: 0 0 8px #00eaff, 0 0 16px #ff2fd6, 0 2px 8px #0008;
+        }
+        .text-cyberpunk-yellow {
+            color: #ffe600 !important;
+            text-shadow: 0 0 8px #ffe600, 0 0 16px #ff2fd6, 0 2px 8px #0008;
+        }
+        .gradient-card h1, .gradient-card h2, .gradient-card h3 {
+            font-family: 'Press Start 2P', monospace !important;
+            letter-spacing: 1.5px;
+        }
+        .pixel-border-8bit {
+            border: 6px solid #ffe600;
+            box-shadow:
+                0 0 0 8px #ff2fd6,
+                0 0 0 12px #1a003a,
+                0 0 0 16px #00eaff;
+            border-radius: 0.5rem;
+            position: relative;
+        }
+        .status-bar-8bit {
+            background: #1a003a;
+            border-bottom: 4px solid #ffe600;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 0.7rem;
+            color: #fff;
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
+            z-index: 2;
+            position: relative;
+        }
+        .icon-8bit {
+            font-family: inherit;
+            filter: drop-shadow(0 0 2px #00eaff) drop-shadow(0 0 2px #ff2fd6);
+            margin-right: 2px;
+        }
+        .btn-8bit {
+            font-family: 'Press Start 2P', monospace;
+            background: #ffe600;
+            color: #1a003a;
+            border: 2px solid #ff2fd6;
+            border-radius: 0;
+            padding: 4px 18px;
+            margin: 0 4px;
+            box-shadow: 2px 2px 0 #ff2fd6, 4px 4px 0 #00eaff;
+            text-shadow: 1px 1px 0 #fff;
+            font-size: 0.7rem;
+            transition: 0.1s;
+        }
+        .btn-8bit:active {
+            box-shadow: none;
+            background: #ff2fd6;
+            color: #ffe600;
+        }
+        .solo-status-card {
+            background: rgba(10, 30, 60, 0.92);
+            border: 2.5px solid #00eaff;
+            box-shadow: 0 0 32px 8px #00eaff, 0 0 64px 16px #2b8fff inset;
+            border-radius: 1.2rem;
+            position: relative;
+            backdrop-filter: blur(6px);
+            max-width: 370px;
+            margin: 0 auto;
+            font-family: 'Segoe UI', 'Prompt', 'Kanit', Arial, sans-serif;
+            color: #eaf6ff;
+        }
+        .status-header {
+            background: linear-gradient(90deg, #0a1e3c 60%, #00eaff 100%);
+            border-top-left-radius: 1.2rem;
+            border-top-right-radius: 1.2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #00eaff;
+            letter-spacing: 2px;
+            box-shadow: 0 2px 8px #00eaff44;
+        }
+        .status-title {
+            text-shadow: 0 0 8px #00eaff, 0 0 16px #2b8fff;
+        }
+        .status-close {
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: #eaf6ff;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+        .status-close:hover {
+            opacity: 1;
+        }
+        .status-profile {
+            gap: 1rem;
+        }
+        .status-avatar {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            border: 2.5px solid #00eaff;
+            box-shadow: 0 0 12px #00eaff;
+            object-fit: cover;
+        }
+        .status-name {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #00eaff;
+            letter-spacing: 1.5px;
+            text-shadow: 0 0 8px #00eaff;
+        }
+        .status-class {
+            font-size: 0.95rem;
+            color: #eaf6ffcc;
+        }
+        .status-stats {
+            background: rgba(0,0,0,0.18);
+            border-radius: 0.5rem;
+            padding: 0.7rem 1.2rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 0 8px #00eaff44 inset;
+            font-size: 0.98rem;
+        }
+        .status-stats .stat-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 4px 0;
+            border-bottom: 1px solid #2b8fff33;
+        }
+        .status-stats .stat-row:last-child {
+            border-bottom: none;
+        }
+        .status-footer {
+            font-size: 0.85rem;
+            color: #00eaff99;
+        }
+        .stat-up-btn {
+            background: #00eaff;
+            color: #0a1e3c;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: bold;
+            margin-left: 6px;
+            padding: 0 8px;
+            box-shadow: 0 2px 8px #00eaff44;
+            cursor: pointer;
+            transition: background 0.15s, color 0.15s;
+        }
+        .stat-up-btn:hover {
+            background: #2b8fff;
+            color: #fff;
+        }
+        .btn-status-allocate {
+            background: linear-gradient(90deg, #00eaff 0%, #2b8fff 100%);
+            color: #0a1e3c;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.05rem;
+            font-weight: bold;
+            padding: 8px 0;
+            box-shadow: 0 2px 12px #00eaff44;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            transition: background 0.15s, color 0.15s;
+        }
+        .btn-status-allocate:hover {
+            background: linear-gradient(90deg, #2b8fff 0%, #00eaff 100%);
+            color: #fff;
+        }
+        .solo-status-outer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .solo-status-card-v2 {
+            background: rgba(20, 10, 40, 0.92);
+            border: 2.5px solid #a259ff;
+            box-shadow: 0 0 32px 8px #a259ff, 0 0 64px 16px #00eaff inset, 0 0 0 4px #fff2 transparent;
+            border-radius: 1.1rem;
+            position: relative;
+            backdrop-filter: blur(8px);
+            max-width: 410px;
+            width: 100%;
+            color: #fff;
+            font-family: 'Segoe UI', 'Prompt', 'Kanit', Arial, sans-serif;
+            padding: 0;
+            overflow: hidden;
+        }
+        .status-header-v2 {
+            background: linear-gradient(90deg, #1a003a 60%, #a259ff 100%);
+            border-bottom: 2px solid #a259ff;
+            text-align: center;
+            padding: 0.7rem 0;
+            box-shadow: 0 2px 12px #a259ff44;
+        }
+        .status-title-v2 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: #fff;
+            text-shadow: 0 0 8px #a259ff, 0 0 16px #00eaff;
+            background: rgba(20,10,40,0.7);
+            border-radius: 0.5rem;
+            padding: 0.2rem 1.5rem;
+            border: 1.5px solid #fff3;
+            display: inline-block;
+        }
+        .status-content-v2 {
+            padding: 2rem 1.5rem 1.5rem 1.5rem;
+        }
+        .status-level-row {
+            margin-bottom: 1.2rem;
+        }
+        .status-level-num {
+            font-size: 2.8rem;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 0 0 12px #a259ff, 0 0 24px #00eaff;
+            line-height: 1;
+        }
+        .status-level-info {
+            line-height: 1.2;
+        }
+        .status-level-label {
+            font-size: 1.1rem;
+            color: #a259ff;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+        }
+        .status-job, .status-title {
+            font-size: 0.98rem;
+            color: #fff;
+            opacity: 0.85;
+        }
+        .status-job span, .status-title span {
+            color: #a259ff;
+            font-weight: 500;
+        }
+        .status-barbox {
+            background: rgba(0,0,0,0.18);
+            border-radius: 0.6rem;
+            padding: 1rem 1rem 0.7rem 1rem;
+            box-shadow: 0 0 8px #a259ff44 inset;
+            font-size: 0.98rem;
+        }
+        .status-bar-labels span {
+            font-size: 0.95rem;
+            color: #fff;
+            opacity: 0.85;
+        }
+        .status-bars {
+            display: flex;
+            gap: 0.5rem;
+        }
+        .status-bar {
+            background: #2b003a;
+            border-radius: 0.4rem;
+            flex: 1 1 0;
+            height: 12px;
+            overflow: hidden;
+            box-shadow: 0 0 6px #a259ff44 inset;
+            border: 1.5px solid #a259ff;
+        }
+        .status-bar.hp > div {
+            background: linear-gradient(90deg, #ff2fd6 0%, #ffb3fe 100%);
+            height: 100%;
+        }
+        .status-bar.mp > div {
+            background: linear-gradient(90deg, #00eaff 0%, #2b8fff 100%);
+            height: 100%;
+        }
+        .status-bar.patronus > div {
+            background: linear-gradient(90deg, #ffe600 0%, #ffb3fe 100%);
+            height: 100%;
+        }
+        .status-bar-values span {
+            font-size: 0.92rem;
+            color: #fff;
+            opacity: 0.85;
+            min-width: 80px;
+            text-align: center;
+        }
+        .status-stats-v2 {
+            margin-top: 1.2rem;
+        }
+        .stat-row-v2 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.4rem 0.2rem;
+            font-size: 1.05rem;
+            border-bottom: 1px solid #a259ff33;
+        }
+        .stat-row-v2:last-child {
+            border-bottom: none;
+        }
+        .stat-row-v2 i {
+            margin-right: 0.4em;
+            color: #a259ff;
+        }
+        .stat-plus {
+            color: #00ff99;
+            font-size: 0.98em;
+            margin-left: 0.3em;
+            font-weight: 500;
+        }
+        .profile-card-intro .status-title-v2 {
+            background: linear-gradient(90deg, #1a003a 60%, #a259ff 100%);
+            color: #fff;
+            border: 1.5px solid #a259ff;
+            text-shadow: 0 0 8px #a259ff, 0 0 16px #00eaff;
+        }
+        .profile-avatar-intro {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            border: 3px solid #a259ff;
+            box-shadow: 0 0 14px 4px #a259ff, 0 0 24px 8px #2b003a;
+            object-fit: cover;
+            background: #fff2;
+        }
+        .profile-level-label {
+            font-size: 1.1rem;
+            color: #a259ff;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+        }
+        .profile-level-num {
+            font-size: 2.1rem;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 0 0 12px #a259ff, 0 0 24px #00eaff;
+            line-height: 1;
+        }
+        .profile-name {
+            font-size: 1.15rem;
+            font-weight: bold;
+            color: #00eaff;
+            letter-spacing: 1.5px;
+            text-shadow: 0 0 8px #00eaff;
+        }
+        .profile-job, .profile-title {
+            font-size: 0.98rem;
+            color: #fff;
+            opacity: 0.85;
+        }
+        .profile-job span, .profile-title span {
+            color: #a259ff;
+            font-weight: 500;
+        }
+        .profile-bio {
+            font-size: 0.97rem;
+            color: #eaf6ff;
+            opacity: 0.9;
+            font-style: italic;
+        }
+        .profile-name-white {
+            color: #fff !important;
+            text-shadow: 0 0 12px #fff, 0 0 24px #a259ff;
+            font-size: 1.22rem;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+        }
+        .profile-id-box {
+            background: rgba(0,0,0,0.22);
+            border: 1.5px solid #a259ff;
+            border-radius: 0.5rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7em;
+            padding: 0.18em 1em 0.18em 0.7em;
+            margin-top: 0.2em;
+            box-shadow: 0 0 8px #a259ff44 inset;
+        }
+        .profile-id-label {
+            color: #a259ff;
+            font-size: 0.98rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 0.3em;
+        }
+        .profile-id-num {
+            color: #fff;
+            font-size: 1.05rem;
+            font-weight: bold;
+            letter-spacing: 1.2px;
+            text-shadow: 0 0 8px #a259ff;
+        }
+    </style>
+</body>
+</html>
